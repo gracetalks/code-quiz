@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* .container {
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 20%;
+    max-width: 500px;
+    max-height: 500px;
+} */
+
+.hide{
+    display: none;
+}
+
+body{
+    max-width: 1000px;
+    position: relative;
+
+}
