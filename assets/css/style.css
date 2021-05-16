@@ -16,8 +16,32 @@
     display: none;
 }
 
+
+
 body{
     max-width: 1000px;
     position: relative;
-
 }
+
+.countdown {
+    float: right;
+}
+
+.highscore{
+    background-color: lemonchiffon;
+}
+
+#viewScores{
+    color: rebeccapurple;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+      background-color: white;
+    }
+  }
