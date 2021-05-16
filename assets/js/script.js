@@ -9,22 +9,22 @@ var questionContent = [
         question: "How many tags are in a normal element?",
         correctAns: "2",
         answerArray: ["2", "3", "5", "1"]
-    }
+    },
     question3 = {
         question: "Where is a meta tag only found?"
         correctAns: "Home Page"
         answerArray: ["Last Page", "Any Page", "Home Page", "Second Page"]
-    }
+    },
     question4 = {
         question: "Which property is used to change the face of a font?"
         correctAns: "Font-Family"
         answerArray: ["Font-Variable", "Font-Family", "Font-Style", "Font-Weight"]
-    }
+    },
     question5 = {
         question: "Which property specifies the right padding of an element?"
         correctAns: "Padding-Right"
         answerArray: ["Padding-Right", "Padding-Left", "Padding-Top", "Padding-Bottom"]
-    }
+    },
 ]
 
 var highscores = [];
@@ -43,18 +43,19 @@ var question = document.getElementById('question');
 var answers = document.getElementById('answers');
 var feedback = document.getElementById('feedback');
 
-//Saving records
+// saving records of scores
 var saveRecords = document.getElementById('saveRecords');
 var displayScore = document.getElementById('displayScore');
 var initialText = document.getElementById('initialText');
 var submitInitials = document.getElementById('submitInitials');
 
-//final score page
+// final score page
 var highscorePage = document.getElementById('highscorePage');
 var highscoreContainer = document.getElementById('highscoreContainer');
 var goBack = document.getElementById('goBack');
 var clearHighscores = document.getElementById('clearHighscores');
 
+// order of pages 
 var pageArray = [startPage, questionPage, saveRecords, highscorePage];
 
 viewScores.addEventListener('click', openHighscorePage);
@@ -79,7 +80,7 @@ function hideTimer() {
 }
 
 var isQuizzing = false;
-var quizTime = 30;
+var quizTime = 75;
 var secondsLeft;
 timer.textContent = "Time " + quizTime;
 
@@ -108,6 +109,7 @@ function startQuiz() {
     secondsLeft = quizTime;
     isQuizzing = true;
     questionIndex = 0;
+
     // calling the class hide on each page
     hidePages();
     questionPage.classList.remove('hide');
@@ -134,6 +136,7 @@ function startQuiz() {
     }, 1000)
 }
 
+// calling timer to be hidden and display score
 function openInitialsPage() {
     hideTimer();
     if (finalScore < 1) {
@@ -145,6 +148,7 @@ function openInitialsPage() {
     saveRecords.classList.remove('hide')
 }
 
+// open high score page while hiding timer
 function openHighscorePage() {
     hideTimer();
     isQuizzing = false;
@@ -153,6 +157,7 @@ function openHighscorePage() {
 
 }
 
+// ordering high scores with the top score being displayed against the score that was just posted
 function organizeHighScores() {
     highscores.push([finalScore, initialText.value]);
     highscores.sort((a, b) => b[0] - a[0]);
@@ -166,6 +171,7 @@ function organizeHighScores() {
     openHighscorePage();
 }
 
+// calling for new high score to be displayed 
 function addInitial(index) {
     var newHighscore = document.createElement('div');
     newHighscore.textContent = index[0] + " - " + index[1];
@@ -173,19 +179,20 @@ function addInitial(index) {
     highscoreContainer.appendChild(newHighscore);
 }
 
-
+// listing in the high score container
 function eraseHighscores() {
     while (highscoreContainer.hasChildNodes()) {
         highscoreContainer.removeChild(highscoreContainer.childNodes[0]);
     }
 }
 
+// clearing high scores 
 function clearHighscorers() {
     eraseHighscores();
     highscores = [];
 }
 
-
+// opening start page with timer being displayed
 function openStartPage() {
     timer.textContent = "Time: " + secondsLeft;
     timer.classList.remove('hide');
@@ -194,12 +201,13 @@ function openStartPage() {
     startPage.classList.remove('hide');
 }
 
-
+// reordering elements randomly
 function arrayShuffle(arr) {
     console.log("shuffle arr argument", arr);
     return arr.sort(() => Math.random() - 0.5);
 }
 
+// updating questions once answered
 function questionUpdater(array, index) {
     question.textContent = array[index].question;
     var ans;
