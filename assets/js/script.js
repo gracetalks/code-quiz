@@ -11,18 +11,18 @@ var questionContent = [
         answerArray: ["2", "3", "5", "1"]
     },
     question3 = {
-        question: "Where is a meta tag only found?"
-        correctAns: "Home Page"
+        question: "Where is a meta tag only found?",
+        correctAns: "Home Page",
         answerArray: ["Last Page", "Any Page", "Home Page", "Second Page"]
     },
     question4 = {
-        question: "Which property is used to change the face of a font?"
-        correctAns: "Font-Family"
+        question: "Which property is used to change the face of a font?",
+        correctAns: "Font-Family",
         answerArray: ["Font-Variable", "Font-Family", "Font-Style", "Font-Weight"]
     },
     question5 = {
-        question: "Which property specifies the right padding of an element?"
-        correctAns: "Padding-Right"
+        question: "Which property specifies the right padding of an element?",
+        correctAns: "Padding-Right",
         answerArray: ["Padding-Right", "Padding-Left", "Padding-Top", "Padding-Bottom"]
     },
 ]
