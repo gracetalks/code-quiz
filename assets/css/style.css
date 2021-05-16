@@ -4,12 +4,13 @@
     margin: 0 auto;
 }
 
-/* .container {
+/*.container {
     position: absolute;
     margin-left: 30%;
     margin-top: 20%;
     max-width: 500px;
     max-height: 500px;
+    background-color: purple
 } */
 
 .hide{
@@ -40,7 +41,7 @@ button{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 600px) {
     body {
       background-color: white;
     }

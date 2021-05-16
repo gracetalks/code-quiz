@@ -110,7 +110,7 @@ function startQuiz() {
     isQuizzing = true;
     questionIndex = 0;
 
-    // calling the class hide on each page
+    // adding class hide on each page
     hidePages();
     questionPage.classList.remove('hide');
 
@@ -175,6 +175,7 @@ function organizeHighScores() {
 function addInitial(index) {
     var newHighscore = document.createElement('div');
     newHighscore.textContent = index[0] + " - " + index[1];
+    // adding class for high score in CSS
     newHighscore.classList.add("highscore");
     highscoreContainer.appendChild(newHighscore);
 }
@@ -195,6 +196,7 @@ function clearHighscorers() {
 // opening start page with timer being displayed
 function openStartPage() {
     timer.textContent = "Time: " + secondsLeft;
+    // adding timer to class hide
     timer.classList.remove('hide');
     isQuizzing = false;
     hidePages();
@@ -207,7 +209,7 @@ function arrayShuffle(arr) {
     return arr.sort(() => Math.random() - 0.5);
 }
 
-// updating questions once answered
+// updating each question once answered
 function questionUpdater(array, index) {
     question.textContent = array[index].question;
     var ans;
@@ -215,7 +217,7 @@ function questionUpdater(array, index) {
     var currentAnswerArray = arrayShuffle(array[index].answerArray);
 
     for (var i = 0; i < currentAnswerArray.length; i++) {
-
+        // listing answers with buttons to answer
         ans = document.createElement("LI");
         but = document.createElement('button');
 
@@ -237,7 +239,7 @@ function clearQuestion() {
 
 function questionController(event) {
     console.log(event);
-
+    // adding substring to extract in the order listed; feedback will either apply to correct or incorrect
     if (event.target.textContent.substring(3) == questionContent[questionArrayOrder[questionIndex]].correctAns) {
         feedback.textContent = "Correct";
         numberCorrect++;
@@ -245,6 +247,7 @@ function questionController(event) {
     } else {
         feedback.textContent = "Incorrect";
         numberIncorrect++;
+        // seconds left will decrease by 5 seconds if incorrect
         secondsLeft -= 5;
     }
 
