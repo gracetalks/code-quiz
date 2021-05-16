@@ -1,45 +1,61 @@
-let questionContent = [
+// questions that will appear on question page
+var questionContent = [
     question1 = {
-        question: "What colour is the sky?",
-        correctAns: "Blue",
-        answerArray: ["Azul", "Blue", "Light Blue", "Grey"]
+        question: "What are variable used for in JavaScript?",
+        correctAns: "To store various values (numbers, letters, dates, etc)",
+        answerArray: ["To vary randomly", "To store various values (numbers, letters, dates, etc)", "To confuse the HTML and CSS", "To delete all content"]
     },
     question2 = {
-        question: "What colour is the sky at night?",
-        correctAns: "Black",
-        answerArray: ["Black", "Purple", "Blackberry", "Red"]
+        question: "How many tags are in a normal element?",
+        correctAns: "2",
+        answerArray: ["2", "3", "5", "1"]
+    }
+    question3 = {
+        question: "Where is a meta tag only found?"
+        correctAns: "Home Page"
+        answerArray: ["Last Page", "Any Page", "Home Page", "Second Page"]
+    }
+    question4 = {
+        question: "Which property is used to change the face of a font?"
+        correctAns: "Font-Family"
+        answerArray: ["Font-Variable", "Font-Family", "Font-Style", "Font-Weight"]
+    }
+    question5 = {
+        question: "Which property specifies the right padding of an element?"
+        correctAns: "Padding-Right"
+        answerArray: ["Padding-Right", "Padding-Left", "Padding-Top", "Padding-Bottom"]
     }
 ]
 
-let highscores = [];
+var highscores = [];
 
 // header
-let viewScores = document.getElementById('viewScores');
-let timer = document.getElementById('timer');
+var viewScores = document.getElementById('viewScores');
+var timer = document.getElementById('timer');
 
 //landing page
-let startPage = document.getElementById('startPage');
-let startButton = document.getElementById('startButton');
+var startPage = document.getElementById('startPage');
+var startButton = document.getElementById('startButton');
 
 //question page
-let questionPage = document.getElementById('questionPage');
-let question = document.getElementById('question');
-let answers = document.getElementById('answers');
-let feedback = document.getElementById('feedback');
+var questionPage = document.getElementById('questionPage');
+var question = document.getElementById('question');
+var answers = document.getElementById('answers');
+var feedback = document.getElementById('feedback');
 
 //Saving records
-let saveRecords = document.getElementById('saveRecords');
-let displayScore = document.getElementById('displayScore');
-let initialText = document.getElementById('initialText');
-let submitInitials = document.getElementById('submitInitials');
+var saveRecords = document.getElementById('saveRecords');
+var displayScore = document.getElementById('displayScore');
+var initialText = document.getElementById('initialText');
+var submitInitials = document.getElementById('submitInitials');
 
 //final score page
-let highscorePage = document.getElementById('highscorePage');
-let highscoreContainer = document.getElementById('highscoreContainer');
-let goBack = document.getElementById('goBack');
-let clearHighscores = document.getElementById('clearHighscores');
+var highscorePage = document.getElementById('highscorePage');
+var highscoreContainer = document.getElementById('highscoreContainer');
+var goBack = document.getElementById('goBack');
+var clearHighscores = document.getElementById('clearHighscores');
 
-let pageArray = [startPage, questionPage, saveRecords, highscorePage];
+var pageArray = [startPage, questionPage, saveRecords, highscorePage];
 
 viewScores.addEventListener('click', openHighscorePage);
 startButton.addEventListener('click', startQuiz);
@@ -49,7 +65,7 @@ goBack.addEventListener('click', openStartPage);
 
 
 function hidePages() {
-    for (let i = 0; i < pageArray.length; i++) {
+    for (var i = 0; i < pageArray.length; i++) {
         if (!pageArray[i].classList.contains('hide')) {
             pageArray[i].classList.add('hide');
         }
@@ -62,26 +78,26 @@ function hideTimer() {
     }
 }
 
-let isQuizzing = false;
-let quizTime = 30;
-let secondsLeft;
+var isQuizzing = false;
+var quizTime = 30;
+var secondsLeft;
 timer.textContent = "Time " + quizTime;
 
-let questionIndex;
-let finalScore = 0;
-let numberCorrect;
-let numberIncorrect;
+var questionIndex;
+var finalScore = 0;
+var numberCorrect;
+var numberIncorrect;
 
 function questionOrder(arr) {
     console.log("arr", arr)
-    let arrIndex = [];
-    for (let i = 0; i < arr.length; i++) {
+    var arrIndex = [];
+    for (var i = 0; i < arr.length; i++) {
         arrIndex.push(i);
     }
     return arrayShuffle(arrIndex)
 }
 
-let questionArrayOrder;
+var questionArrayOrder;
 
 // starting the quiz
 function startQuiz() {
@@ -100,7 +116,7 @@ function startQuiz() {
     questionUpdater(questionContent, questionArrayOrder[questionIndex]);
 
     // starts the countdown of the timer  
-    let timerInterval = setInterval(function () {
+    var timerInterval = setInterval(function () {
         secondsLeft--;
 
         timer.textContent = "Time: " + secondsLeft;
@@ -143,7 +159,7 @@ function organizeHighScores() {
 
     eraseHighscores();
 
-    for (let i = 0; i < highscores.length; i++) {
+    for (var i = 0; i < highscores.length; i++) {
         addInitial(highscores[i]);
     }
 
@@ -151,7 +167,7 @@ function organizeHighScores() {
 }
 
 function addInitial(index) {
-    let newHighscore = document.createElement('div');
+    var newHighscore = document.createElement('div');
     newHighscore.textContent = index[0] + " - " + index[1];
     newHighscore.classList.add("highscore");
     highscoreContainer.appendChild(newHighscore);
@@ -186,11 +202,11 @@ function arrayShuffle(arr) {
 
 function questionUpdater(array, index) {
     question.textContent = array[index].question;
-    let ans;
-    let but;
-    let currentAnswerArray = arrayShuffle(array[index].answerArray);
+    var ans;
+    var but;
+    var currentAnswerArray = arrayShuffle(array[index].answerArray);
 
-    for (let i = 0; i < currentAnswerArray.length; i++) {
+    for (var i = 0; i < currentAnswerArray.length; i++) {
 
         ans = document.createElement("LI");
         but = document.createElement('button');
