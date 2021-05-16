@@ -99,7 +99,7 @@ function startQuiz() {
     clearQuestion();
     questionUpdater(questionContent, questionArrayOrder[questionIndex]);
 
-    // starts the countdown of the timer 
+    // starts the countdown of the timer  
     let timerInterval = setInterval(function () {
         secondsLeft--;
 
