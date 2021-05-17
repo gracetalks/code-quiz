@@ -5,7 +5,7 @@ This project is focused on creating a deployed timed quiz based off of JavaScrip
 Below are the images of my deployed timed quiz:
 
 <img src="./assets/images/IMG.png" alt="Image of Coding Quiz Landing Page">
-<img src="./assets alt="Image of Coding Quiz Questions">
+<img src="./assets/images/RECORDING.mov" alt="Video of Coding Quiz">
 
 Here is the URL to access the Coding Quiz directly:
-<a href="https://gracetalks.github.io/Cynthia-Career-Portfolio/">Visit The Ultimate Coding Quiz!</a>
+<a href="https://gracetalks.github.io/code-quiz/">Visit The Ultimate Coding Quiz!</a>
