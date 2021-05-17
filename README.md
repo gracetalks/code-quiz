@@ -1,13 +1,11 @@
 # code-quiz
 
-This project is focused on creating a deployed portfolio of my personal work samples for future employment. I primarily want employers to see my progress in Web Development from my headshot, work samples, and contact me links to view my resume and repository. In this codebase, you will find capabilities of UI scrolling to corresponding sections and direct links to my applications. While viewing the deployed application on a web browser, you will be able to view the site on various screens and devices with a responsive layout set to create a user-friendly viewing experience.
+This project is focused on creating a deployed timed quiz based off of JavaScript fundamentals that will ultimately store high scores to gauge progress in comparison to other peers in the Coding Boot Camp. In order to make this happen, I used the fundamentals of HTML and CSS to create a quiz structured with the following: a start button that transitions to a deployed quiz with questions and answers, answered questions will move into a new questions, if questions is answered incorrectly then the timer is deducted from. Once all questions are answered, you are deployed to a final score/high score page that shows your score in comparison to any high scores listed. 
 
-Below are the images of my deployed portfolio:
+Below are the images of my deployed timed quiz:
 
-<img src="./assets/images/img1.png" alt="Image of Coding Quiz Landing Page">
-<img src="./assets/images/img2.png" alt="Image of Coding Quiz Questions">
-<img src="./assets/images/img3.png" alt="Image of Coding Quiz High Scores">
-<img src="./assets/images/img5.png" alt="Image of My Portfolio">
+<img src="./assets/images/IMG.png" alt="Image of Coding Quiz Landing Page">
+<img src="./assets alt="Image of Coding Quiz Questions">
 
-Here is the URL to access the website directly:
-<a href="https://gracetalks.github.io/Cynthia-Career-Portfolio/">Visit My Portfolio!</a>
+Here is the URL to access the Coding Quiz directly:
+<a href="https://gracetalks.github.io/Cynthia-Career-Portfolio/">Visit The Ultimate Coding Quiz!</a>
