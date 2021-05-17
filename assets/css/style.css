@@ -4,14 +4,24 @@
     margin: 0 auto;
 }
 
-/*.container {
+.container {
     position: absolute;
-    margin-left: 30%;
+    margin-left: 20%;
     margin-top: 20%;
-    max-width: 500px;
-    max-height: 500px;
-    background-color: purple
-} */
+    max-width: 1000px;
+    max-height: 1000px;
+    background-color: white; 
+} 
+
+.container-high {
+    position: absolute;
+    margin-left: 40%;
+    margin-top: 20%;
+    max-width: 1000px;
+    max-height: 1000px;
+    background-color: plum;
+}
+
 
 .hide{
     display: none;
@@ -22,6 +32,15 @@
 body{
     max-width: 1000px;
     position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30%;
+}
+
+p {
+    text-align: center;
 }
 
 .countdown {
@@ -35,13 +54,15 @@ body{
 #viewScores{
     color: rebeccapurple;
     cursor: pointer;
+    float: left;
 }
 
-button{
+.button{
     cursor: pointer;
+    margin: auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     body {
       background-color: white;
     }

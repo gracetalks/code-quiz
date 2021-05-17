@@ -64,7 +64,7 @@ submitInitials.addEventListener('click', organizeHighScores);
 clearHighscores.addEventListener('click', clearHighscorers);
 goBack.addEventListener('click', openStartPage);
 
-
+// hid
 function hidePages() {
     for (var i = 0; i < pageArray.length; i++) {
         if (!pageArray[i].classList.contains('hide')) {
@@ -78,7 +78,7 @@ function hideTimer() {
         timer.classList.add('hide');
     }
 }
-
+// setting up quiz layout
 var isQuizzing = false;
 var quizTime = 75;
 var secondsLeft;
@@ -109,6 +109,10 @@ function startQuiz() {
     secondsLeft = quizTime;
     isQuizzing = true;
     questionIndex = 0;
+    startPage.classList.add("container")
+    questionPage.classList.add("container")
+    saveRecords.classList.add("container")
+    highscorePage.classList.add("container")
 
     // adding class hide on each page
     hidePages();
@@ -253,13 +257,14 @@ function questionController(event) {
 
     timer.textContent = "Time:" + secondsLeft;
 
+    // calling timer to run out
     setTimeout(function () {
         feedback.textContent = ""
     }, 1000);
 
     clearQuestion();
     questionIndex++;
-
+    
     if (questionIndex < questionContent.length) {
         questionUpdater(questionContent, questionArrayOrder[questionIndex]);
     } else {

@@ -4,22 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Coding Quiz!</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- <a href="highscores.html">The Ultimate HighScores!</a>
-    <div class="timer"></div>
-    <div class="container">
-        <div class="coding-question">
-            <h1>The Ultimate Coding Quiz!</h1>
-            <p>This is where you're tested on your skill set on what it takes to become the Ultimate 
-                Coder! Answer the following questions below, and try your best to be on the Ultimate HighScores list! Please
-                note that if you get the answer incorrect, this will deduct from your time (YIKES!). Good Luck!
-            </p>
-        </div>
-        
-    </div> -->
-
     <header>
         <h5 id="viewScores"> View Highscores</h5>
         <span id="timer" class="countdown"></span>
@@ -32,7 +20,7 @@
                 Coder! Answer the following questions below, and try your best to be on the Ultimate HighScores list! Please
                 note that if you get the answer incorrect, this will deduct from your time (YIKES!). Good Luck!
             </p>
-            <button id="startButton" type="button">Start Quiz</button>
+            <button id="startButton" class="button">Start Quiz</button>
         </section>
 
         <!-- Question page as the user starts the quiz -->
@@ -41,24 +29,23 @@
             <ul id="answers">
 
             </ul>
-            <hr>
             <h3 id="feedback"></h3>
         </section>
 
         <!-- Saving records page -->
         <section id="saveRecords" class="hide">
-            <h2>All Done</h2>
+            <h2>Let's See How You Did!</h2>
             <h3>Your final score is: <span id="displayScore"></span></h3>
-            <h3>Enter your initial: <input type="text" id="initialText"></h3>
+            <h3>Enter your initials: <input type="text" id="initialText"></h3>
             <button id="submitInitials">Submit</button>
         </section>
         
         <!-- final score page -->
         <section id="highscorePage" class="hide">
-            <h2>Highscores</h2>
+            <h2>High Scores</h2>
             <div id="highscoreContainer"></div>
             <button id="goBack">Go Back</button>
-            <button id="clearHighscores">Clear highscores</button>
+            <button id="clearHighscores">Clear High Scores</button>
         </section>
 
     </main>
